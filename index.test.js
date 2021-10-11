@@ -8,10 +8,16 @@ async function run (input, output, opts = { }) {
   expect(result.warnings()).toHaveLength(0)
 }
 
-/* Write tests here
+it('works', async () => {
+  await run('a{ padding: 16px; }', 'a{ padding: 1.0000rem; }', { });
+  await run('a{ padding: 10px; }', 'a{ padding: 0.6250rem; }', { });
 
-it('does something', async () => {
-  await run('a{ }', 'a{ }', { })
-})
+  await run('a{ padding: 16px; }', 'a{ padding: 1.0000em; }', { em: true });
+  await run('a{ padding: 10px; }', 'a{ padding: 0.6250em; }', { em: true });
 
-*/
+  await run('a{ padding: 10px; }', 'a{ padding: 1.0000rem; }', { base: 10 });
+
+  await run('a{ padding: 16px 16px; }', 'a{ padding: 1.0000rem 1.0000rem; }', { });
+  await run('a{ padding: 10px 10px; }', 'a{ padding: 0.6250rem 0.6250rem; }', { });
+  await run('a{ padding: 10px 10px; }', 'a{ padding: 1.0000rem 1.0000rem; }', { base: 10 });
+});

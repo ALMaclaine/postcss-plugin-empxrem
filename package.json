@@ -1,18 +1,25 @@
 {
-  "name": "PLUGIN_NAME",
-  "version": "0.0.0",
-  "description": "PostCSS plugin PLUGIN_DESC",
+  "name": "postcss-plugin-empxrem",
+  "version": "0.0.1",
+  "description": "PostCSS plugin to use empxrem library for converting px values to em/rem",
   "keywords": [
     "postcss",
     "css",
-    "postcss-plugin"KEYWORDS
+    "postcss-plugin",
+    "empxrem",
+    "em",
+    "rem",
+    "conversion"
   ],
   "scripts": {
     "test": "jest --coverage && eslint ."
   },
-  "author": "AUTHOR_NAME <AUTHOR_EMAIL>",
+  "author": "Alessandro Maclaine",
   "license": "MIT",
-  "repository": "GITHUB_NAME/PLUGIN_NAME",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ALMaclaine/postcss-plugin-empxrem.git"
+  },
   "engines": {
     "node": ">=10.0.0"
   },
@@ -28,6 +35,10 @@
     "postcss": "^8.2.8",
     "simple-git-hooks": "^2.0.2"
   },
+  "bugs": {
+    "url": "https://github.com/ALMaclaine/postcss-plugin-empxrem/issues"
+  },
+  "homepage": "https://github.com/ALMaclaine/postcss-plugin-empxrem/",
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
@@ -57,5 +68,8 @@
         "statements": 100
       }
     }
+  },
+  "dependencies": {
+    "empxrem": "^0.0.9"
   }
 }
