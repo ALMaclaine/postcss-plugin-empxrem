@@ -1,6 +1,6 @@
 {
   "name": "postcss-plugin-empxrem",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "PostCSS plugin to use empxrem library for converting px values to em/rem",
   "keywords": [
     "postcss",
